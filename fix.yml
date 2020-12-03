@@ -1,0 +1,9 @@
+rules:
+  - id: use-new-function
+    languages:
+      - typescript
+    message: |
+      Use `new Function` instead of `eval
+    pattern: eval($X)
+    fix: new Function($X)
+    severity: WARNING
